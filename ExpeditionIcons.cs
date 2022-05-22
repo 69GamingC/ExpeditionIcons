@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -169,7 +169,7 @@ namespace ExpeditionIcons
                     {
                         var positionedComp = e.GetComponent<Positioned>();
 
-                        var text = "D";
+                        var text = "";
 
                         artifacts.Add(e);
 
@@ -579,24 +579,24 @@ namespace ExpeditionIcons
                     //                background = Color.Purple;
                     //            }
 
-                    if ((mods.Any(x => x.Contains("ExpeditionRelicModifierExpeditionInfluencedItemsElite"))) && Settings.ShowInfluence.Value)
-                    {
-                        text = text + " " + "Infl Mon";
-                        background = Settings.InfluenceColor;
-                        if (!remnants.Contains(e))
-                        {
-                            remnants.Add(e);
-                        }
-                    }
-                    if ((mods.Any(x => x.Contains("ExpeditionRelicModifierExpeditionInfluencedtemsChest"))) && Settings.ShowInfluence.Value)
-                    {
-                        text = text + " " + "Infl Che";
-                        background = Settings.InfluenceColor;
-                        if (!artifacts.Contains(e))
-                        {
-                            artifacts.Add(e);
-                        }
-                    }
+                    //if ((mods.Any(x => x.Contains("ExpeditionRelicModifierExpeditionInfluencedItemsElite"))) && Settings.ShowInfluence.Value)
+                    //{
+                    //    text = text + " " + "Infl Mon";
+                    //    background = Settings.InfluenceColor;
+                    //    if (!remnants.Contains(e))
+                    //    {
+                    //        remnants.Add(e);
+                    //    }
+                    //}
+                    //if ((mods.Any(x => x.Contains("ExpeditionRelicModifierExpeditionInfluencedtemsChest"))) && Settings.ShowInfluence.Value)
+                    //{
+                    //    text = text + " " + "Infl Che";
+                    //    background = Settings.InfluenceColor;
+                    //    if (!artifacts.Contains(e))
+                    //    {
+                    //        artifacts.Add(e);
+                    //    }
+                    //}
 
                     //if ((mods.Any(x => x.Contains("ExpeditionRelicModifierExpeditionMapsElite"))))
                     //            {
@@ -608,16 +608,16 @@ namespace ExpeditionIcons
                     //                text = text + " " +"Map Che";
                     //                background = Color.Purple;
                     //            }
-                    //if ((mods.Any(x => x.Contains("ExpeditionRelicModifierExpeditionFracturedItemsElite"))))
-                    //            {
-                    //                text = text + " " +"Frac Mon";
-                    //                background = Color.Purple;
-                    //            }
-                    //if ((mods.Any(x => x.Contains("ExpeditionRelicModifierExpeditionFracturedItemsChest"))))
-                    //            {
-                    //                text = text + " " +"Frac Che";
-                    //                background = Color.Purple;
-                    //            }
+                    if ((mods.Any(x => x.Contains("ExpeditionRelicModifierExpeditionFracturedItemsElite"))))
+                                {
+                                    text = text + " " +"Frac Mon";
+                                    background = Color.Purple;
+                                }
+                    if ((mods.Any(x => x.Contains("ExpeditionRelicModifierExpeditionFracturedItemsChest"))))
+                                {
+                                    text = text + " " +"Frac Che";
+                                    background = Color.Purple;
+                                }
 
                     if ((mods.Any(x => x.Contains("ExpeditionRelicModifierHarbingerCurrencyElite"))) && Settings.ShowHarbinger.Value)
                     {
